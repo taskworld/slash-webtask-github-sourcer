@@ -49,12 +49,9 @@ module.exports = function slashWebtaskFromGitHub({
           return `token ${installationAccessToken}`
         },
       })
-      const fileResponse = await octokit.repos.getContents({
-        owner,
-        repo,
-        path,
-        ref,
-      })
+      const getContentsParams = { owner, repo, path }
+      if (ref) getContentsParams.ref = ref
+      const fileResponse = await octokit.repos.getContents(getContentsParams)
       const myModule = {}
       new Function(
         'require',
