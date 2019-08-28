@@ -7,8 +7,32 @@ module.exports = function slashWebtaskFromGitHub({
   appId,
   installationId,
   path,
+  ref,
 }) {
   return async (ctx, cb) => {
+    const misconfigured = reason => {
+      cb(null, {
+        text: `slash-webtask-github-sourcer is misconfigured: ${reason}`,
+      })
+    }
+    if (!owner) {
+      return misconfigured('Missing parameter: `owner`')
+    }
+    if (!repo) {
+      return misconfigured('Missing parameter: `repo`')
+    }
+    if (!appId) {
+      return misconfigured('Missing parameter: `appId`')
+    }
+    if (!installationId) {
+      return misconfigured('Missing parameter: `installationId`')
+    }
+    if (!path) {
+      return misconfigured('Missing parameter: `path`')
+    }
+    if (!ctx.secrets.GH_APP_PRIVATE_KEY_BASE64) {
+      return misconfigured('Missing secret: `GH_APP_PRIVATE_KEY_BASE64`')
+    }
     try {
       const app = new App({
         id: appId,
@@ -29,6 +53,7 @@ module.exports = function slashWebtaskFromGitHub({
         owner,
         repo,
         path,
+        ref,
       })
       const myModule = {}
       new Function(
