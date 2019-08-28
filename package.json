@@ -1,0 +1,23 @@
+{
+  "name": "slash-webtask-github-sourcer",
+  "version": "1.0.0",
+  "description": "Make Slash Webtasks run code directly off GitHub",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taskworld/slash-webtask-github-sourcer.git"
+  },
+  "author": "Thai Pangsakulyanont <org.yi.dttvb@gmail.com> (http://dt.in.th/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/taskworld/slash-webtask-github-sourcer/issues"
+  },
+  "homepage": "https://github.com/taskworld/slash-webtask-github-sourcer#readme",
+  "dependencies": {
+    "@octokit/app": "^4.1.0",
+    "@octokit/rest": "^16.28.7"
+  }
+}
