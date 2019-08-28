@@ -1,4 +1,13 @@
-function slashWebtaskFromGitHub({ owner, repo, appId, installationId, path }) {
+const { App } = require('@octokit/app')
+const Octokit = require('@octokit/rest')
+
+module.exports = function slashWebtaskFromGitHub({
+  owner,
+  repo,
+  appId,
+  installationId,
+  path,
+}) {
   return async (ctx, cb) => {
     try {
       const app = new App({
