@@ -42,6 +42,7 @@ This is done by making the webtask load the code from GitHub and evaluate it in 
         appId: 12345,
         installationId: 1234567,
         path: 'hello.js',
+        // ref: 'master', // If you want to use a specific branch
       })
       ```
 
