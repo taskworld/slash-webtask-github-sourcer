@@ -31,21 +31,23 @@ This is done by making the webtask load the code from GitHub and evaluate it in 
 
    1. In Slack, run `/wt make hello` and click the resulting edit link.
 
-   2. Put in this code, change things as required:
+   2. Copy the existing code as-is, and put it in your GitHub Repository. Example: [hello.js](hello.js)
+
+   3. Put in this code, change things as required:
 
       ```js
       module.exports = require('slash-webtask-github-sourcer')({
         owner: 'taskworld',
-        repo: 'slash-webtasks',
+        repo: 'slash-webtask-github-sourcer',
         appId: 12345,
         installationId: 1234567,
         path: 'hello.js',
       })
       ```
 
-   3. Configure the webtask **Secrets** &rarr; **Add Secret**
+   4. Configure the webtask **Secrets** &rarr; **Add Secret**
 
       - Secret key: **GH_APP_PRIVATE_KEY_BASE64**
       - Secret value: _(encode the **Private Key** using Base64 and paste it here)_
 
-   4. Configure the webtask **npm Modules** &rarr; **Add Module** &rarr; Type in **slash-webtask-github-sourcer**.
+   5. Configure the webtask **npm Modules** &rarr; **Add Module** &rarr; Type in **slash-webtask-github-sourcer**.
