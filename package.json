@@ -1,6 +1,6 @@
 {
   "name": "slash-webtask-github-sourcer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "files": [
     "index.js"
   ],
