@@ -1,6 +1,9 @@
 {
   "name": "slash-webtask-github-sourcer",
   "version": "1.0.0",
+  "files": [
+    "index.js"
+  ],
   "description": "Make Slash Webtasks run code directly off GitHub",
   "main": "index.js",
   "scripts": {
