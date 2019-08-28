@@ -11,5 +11,5 @@ module.exports = (ctx, cb) => {
   // 2. Response formatting: https://api.slack.com/docs/messages/builder
   // 3. Secrets you configure using the key icon are available on `ctx.secrets`
 
-  cb(null, { text: `Hello, @${ctx.body.user_name}!` })
+  cb(null, { text: `Hello, <@${ctx.body.user_id}>!` })
 }
