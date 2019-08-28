@@ -27,7 +27,7 @@ This is done by making the webtask load the code from GitHub and evaluate it in 
 
    6. Note the **Installation ID** which is in the URL.
 
-2. Create a Slash webtask.
+2. **Create a Slash webtask.**
 
    1. In Slack, run `/wt make hello` and click the resulting edit link.
 
@@ -51,3 +51,5 @@ This is done by making the webtask load the code from GitHub and evaluate it in 
       - Secret value: _(encode the **Private Key** using Base64 and paste it here)_
 
    5. Configure the webtask **npm Modules** &rarr; **Add Module** &rarr; Type in **slash-webtask-github-sourcer**.
+
+3. **Try it out!** Run `/wt hello` in Slack.
