@@ -48,4 +48,4 @@ This is done by making the webtask load the code from GitHub and evaluate it in 
       - Secret key: **GH_APP_PRIVATE_KEY_BASE64**
       - Secret value: _(encode the **Private Key** using Base64 and paste it here)_
 
-   4. Configure the webtask **npm Modules** &rarr; **Add Module** &rarr; Type in **slash-webtask-github-saucer**.
+   4. Configure the webtask **npm Modules** &rarr; **Add Module** &rarr; Type in **slash-webtask-github-sourcer**.
